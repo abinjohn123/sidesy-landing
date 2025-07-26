@@ -116,6 +116,7 @@ export default defineConfig({
   prefetch: true,
   // ! Please remember to replace the following site property with your own domain
   site: 'https://abinjohn123.github.io',
+  base: '/sidesy-landing',
   vite: {
     build: {
       sourcemap: true, // Source maps generation
