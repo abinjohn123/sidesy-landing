@@ -13,8 +13,18 @@ const socialLinks: {
   name: string;
 }[] = [
   {
+    friendlyName: 'Chrome Web Store',
+    link: 'https://chromewebstore.google.com/detail/sidesy-your-comments-side/mlceikceecooilkgiikkopipedhjjech',
+    name: 'mdi:google-chrome',
+  },
+  {
+    friendlyName: 'Firefox Add-ons',
+    link: 'https://addons.mozilla.org/en-US/firefox/addon/sidesy/',
+    name: 'mdi:firefox',
+  },
+  {
     friendlyName: 'Github',
-    link: 'https://github.com/abinjohn123',
+    link: 'https://github.com/abinjohn123/sidesy',
     name: 'mdi:github',
   },
 ];
@@ -23,7 +33,7 @@ const socialLinks: {
 <ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
   {
     socialLinks.map(({ friendlyName, isWebmention, link, name }) => (
-      <li class="flex">
+      <li class="flex text-slate-600">
         <a
           class="inline-block"
           href={link}
