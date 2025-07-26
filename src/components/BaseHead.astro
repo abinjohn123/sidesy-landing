@@ -12,7 +12,7 @@ const titleSeparator = '•';
 const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const socialImageURL = new URL(
-  ogImage ? ogImage : '/social-card.png',
+  ogImage ? ogImage : `${import.meta.env.BASE_URL}social-card.png`,
   Astro.url
 ).href;
 ---
@@ -22,13 +22,13 @@ const socialImageURL = new URL(
 <title>{siteTitle}</title>
 
 {/* Icons */}
-<link href="/favicon.png" rel="icon" type="image/png" />
+<link href={`${import.meta.env.BASE_URL}favicon.png`} rel="icon" type="image/png" />
 {
   import.meta.env.PROD && (
     <>
       {/* Favicon & Apple Icon */}
-      <link rel="icon" href="/favicon.png" type="image/png" />
-      <link href="/icons/apple-touch-icon.png" rel="apple-touch-icon" />
+      <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.png`} type="image/png" />
+      <link href={`${import.meta.env.BASE_URL}icons/apple-touch-icon.png`} rel="apple-touch-icon" />
       {/* Manifest */}
       <link href="/manifest.webmanifest" rel="manifest" />
     </>
