@@ -22,13 +22,17 @@ import BackgroundBlur from '@/components/BackgroundBlur.astro';
 
     <!-- Walkthrough -->
     <div class="flex h-fit w-full flex-col gap-4">
-      <div style="position: relative; padding-bottom: 54.6875%; height: 0;">
+      <div
+        class="rounded-md border-2 border-red-200"
+        style="position: relative; padding-bottom: 54.6875%; height: 0;"
+      >
         <iframe
           src="https://www.loom.com/embed/9f29e45b93f04f65a7f5b7071293542f?sid=bd050883-78dc-4cf3-af7e-195ce89030ea"
+          title="Sidesy - How to use?"
           frameborder="0"
           allowfullscreen
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-        ></iframe>
+          class="rounded-md"></iframe>
       </div>
 
       <!-- Feedback & Donation Links -->
@@ -36,7 +40,7 @@ import BackgroundBlur from '@/components/BackgroundBlur.astro';
         <a
           href="https://buymeacoffee.com/abin.john"
           target="_blank"
-          class="rounded border border-solid border-red-600 bg-red-400 px-4 py-2 font-medium text-slate-100 transition-colors hover:bg-red-500"
+          class="rounded-md border border-solid border-red-200 bg-red-400 px-4 py-2 font-medium text-slate-100 shadow-red-200 drop-shadow-md"
           >Buy my a coffee</a
         >
       </div>
